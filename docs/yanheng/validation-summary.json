@@ -1,0 +1,146 @@
+{
+  "verified_date": "2026-11-01",
+  "upstream_commit": "864bbc49d86f7f48ed3e4d194ffc15eaaebbb25d",
+  "market_data": [
+    {
+      "symbol": "688981.SH",
+      "name": "中芯国际",
+      "asset_type": "stock",
+      "rows": 677,
+      "first": "2024-01-02",
+      "last": "2026-10-30",
+      "raw_sha256": "cff97fa2bf86a5a4f0c8373c4b12463d7d2e2033fe9d4380f452daab31623a54",
+      "forward_sha256": "cff97fa2bf86a5a4f0c8373c4b12463d7d2e2033fe9d4380f452daab31623a54"
+    },
+    {
+      "symbol": "002371.SZ",
+      "name": "北方华创",
+      "asset_type": "stock",
+      "rows": 683,
+      "first": "2024-01-02",
+      "last": "2026-10-30",
+      "raw_sha256": "52d4a3f993edad223faa6af03f574aa476da4438b4b2a473af6c1944c522b281",
+      "forward_sha256": "cea913083f0c2eaecd1675caafa9764f1e4b02206407ac0f500f84cfe57c048a"
+    },
+    {
+      "symbol": "512480.SH",
+      "name": "半导体ETF",
+      "asset_type": "etf",
+      "rows": 683,
+      "first": "2024-01-02",
+      "last": "2026-10-30",
+      "raw_sha256": "49e539d63919e824ec6ef56527aec10f22f12f005eac6cfd843d010cd665990e",
+      "forward_sha256": "b2fecdcc658f2ecb8dfa13e8507820c773bf2e1198d3274e7a681bb42f83c9f8"
+    }
+  ],
+  "indices": [
+    {
+      "symbol": "000001.SH",
+      "name": "上证指数",
+      "rows": 728,
+      "first": "2023-10-30",
+      "last": "2026-10-30",
+      "sha256": "f5d4d294d164a9d07cd334661dae583fc7c89446dd222225afd0c56feb474668",
+      "file": "http-index-000001.SH.json"
+    },
+    {
+      "symbol": "399001.SZ",
+      "name": "深证成指",
+      "rows": 728,
+      "first": "2023-10-30",
+      "last": "2026-10-30",
+      "sha256": "c314d5c99296744df87c0cd7f7f103ea047be8cb08e38dcbe653cc0120730ef7",
+      "file": "http-index-399001.SZ.json"
+    },
+    {
+      "symbol": "399006.SZ",
+      "name": "创业板指",
+      "rows": 728,
+      "first": "2023-10-30",
+      "last": "2026-10-30",
+      "sha256": "b342b3a9dd15fdc8aac636df519ca7af1dc5db1335d7ac8c165b364afe2de18a",
+      "file": "http-index-399006.SZ.json"
+    },
+    {
+      "symbol": "000680.SH",
+      "name": "科创综指",
+      "rows": 728,
+      "first": "2023-10-30",
+      "last": "2026-10-30",
+      "sha256": "ae4c2b886b40b8afa7593f5bf140f51a72c25807a14eaa413418dd15c7fe5232",
+      "file": "http-index-000680.SH.json"
+    }
+  ],
+  "daily_bars_total": 4955,
+  "financial_samples": [
+    {
+      "symbol": "688981.SH",
+      "report": "RPT_DMSK_FN_INCOME",
+      "source": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "status": "ok",
+      "count": 12,
+      "sha256": "56159deeae5b529a5d640a25811a477a0280214ed5c28fd9daeaa0c7c3869dfc"
+    },
+    {
+      "symbol": "688981.SH",
+      "report": "RPT_DMSK_FN_BALANCE",
+      "source": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "status": "ok",
+      "count": 12,
+      "sha256": "7bfed991944c1c2c2f2b57b5db287fdd78e4791e2e1fb30d4af4c183f3206ce3"
+    },
+    {
+      "symbol": "688981.SH",
+      "report": "RPT_DMSK_FN_CASHFLOW",
+      "source": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "status": "ok",
+      "count": 12,
+      "sha256": "25878ffd3ede1578bf7296c5847c809483e7588eac31750cac2ed3560fdb7a97"
+    },
+    {
+      "symbol": "002371.SZ",
+      "report": "RPT_DMSK_FN_INCOME",
+      "source": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "status": "ok",
+      "count": 12,
+      "sha256": "74b1f4184a5dfa966478a0966c09bdb9db78118bd216a598b464489c235fc417"
+    },
+    {
+      "symbol": "002371.SZ",
+      "report": "RPT_DMSK_FN_BALANCE",
+      "source": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "status": "ok",
+      "count": 12,
+      "sha256": "cd5b69d4ed130fb372b2b4f4fdd2c151562227838e582e39f58736e002e31aab"
+    },
+    {
+      "symbol": "002371.SZ",
+      "report": "RPT_DMSK_FN_CASHFLOW",
+      "source": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "status": "ok",
+      "count": 12,
+      "sha256": "16312d0bef4daec0b27b9add430d08812b3349ce8122d51f2c40183b121f93b0"
+    }
+  ],
+  "backtest_http_checks": [
+    {
+      "path": "/api/backtest/strategy/run",
+      "asset_type": "stock",
+      "status": 200,
+      "trades": 35,
+      "reproduces_saved_trades_and_equity": true
+    },
+    {
+      "path": "/api/backtest/strategy/run",
+      "asset_type": "etf",
+      "status": 200,
+      "trades": 16,
+      "reproduces_saved_trades_and_equity": true
+    }
+  ],
+  "selected_upstream_backend_tests": 40,
+  "frontend_index_tests": 3,
+  "price_basis": "Saved provider forward-adjusted OHLC; raw prices kept separately. Ex-factor permissions unavailable; point-in-time factors and corporate-action cash/share accounting not validated.",
+  "scope": "Original-engine execution validation only. Fixed present-day sample universe, no independent benchmark, no out-of-sample claim. Financial and industry series are not inputs to these backtests.",
+  "data_redistribution": "Original provider payloads, financial tables and runtime databases are not included. Hashes identify the locally checked snapshots; providers may revise historical responses, so later downloads can differ."
+}

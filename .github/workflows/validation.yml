@@ -1,0 +1,36 @@
+name: Research validation
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.13.6'
+          python-version: '3.12'
+      - run: uv sync --project backend --frozen --extra dev
+      - run: uv run --project backend --frozen python -m compileall -q research
+      - run: uv run --frozen --extra dev python -m pytest tests/test_backtest_etf.py tests/backtest/test_cost_model.py tests/backtest/test_strategy_backtest_correctness.py tests/backtest/test_limit_up_close_fill.py tests/backtest/test_limit_down_close_exit.py -q
+        working-directory: backend
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: '9.10.0'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test:indices
+      - run: pnpm build
